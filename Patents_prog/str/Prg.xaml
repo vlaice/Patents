@@ -1,0 +1,88 @@
+﻿<Page x:Class="Patents_prog.str.Prg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Patents_prog.str"
+      mc:Ignorable="d" 
+       Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+      Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+      Title="Prg" Style="{DynamicResource PageStyle}">
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF4700E0" Offset="0.01"/>
+                        <GradientStop Color="#FF4700E0" Offset="0.1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="/FastType;component/./#Flow Ext"/>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Padding="10"   Width="{TemplateBinding Width}" CornerRadius="30" BorderThickness="5" Background="{TemplateBinding Background}" RenderTransformOrigin="0.5,0.5" Opacity="1">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.126"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="#FFF97100"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="one1" Content="Forest of number &#xA;     of forest fire" Click="one1_Click"   FontSize="45
+                "  FontFamily="/Patents_prog;component/Text/#Franklin Gothic Demi"   Grid.Column="0" Grid.Row="1">
+            <Button.Background>
+                <SolidColorBrush Color="#FF7649D8" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="b1" IsEnabled="True" ToolTip="Назад" VerticalAlignment="Center" HorizontalAlignment="Left" Background="{x:Null}" Click="b1_Click">           
+            <StackPanel Height="90" Width="123">
+                <Image x:Name="image_1" Height="88" Margin="10,0">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Img\Page2IMG\angle-left.png" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Source" Value="/Img\Page2IMG\angle-left1.png" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>

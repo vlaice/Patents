@@ -1,0 +1,85 @@
+﻿<Page x:Class="Patents_prog.str.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Patents_prog.str"
+      mc:Ignorable="d" 
+      Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+      Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+      Title="Page1" Style="{DynamicResource PageStyle}">
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF4700E0" Offset="0.01"/>
+                        <GradientStop Color="#FF4700E0" Offset="0.1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="/FastType;component/./#Flow Ext"/>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Padding="10"   Width="{TemplateBinding Width}" CornerRadius="30" BorderThickness="5" Background="{TemplateBinding Background}" RenderTransformOrigin="0.5,0.5" Opacity="1">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-0.126"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="#FFF97100"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"></RowDefinition>
+            <RowDefinition Height="30*"></RowDefinition>
+            <RowDefinition Height="26*"></RowDefinition>
+            <RowDefinition Height="29*"></RowDefinition>
+            <RowDefinition Height="31*"></RowDefinition>
+            <RowDefinition Height="30*"></RowDefinition>
+            <RowDefinition Height="35*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="116*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="116*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="one1" Content="Программы &#xD;&#xA;   для ЭВМ" FontSize="72" Click="one1_Click"  FontFamily="/Patents_prog;component/Text/#Franklin Gothic Demi"  Grid.RowSpan="7" Grid.Row="0" RenderTransformOrigin="1,1" TextOptions.TextHintingMode="Fixed">
+            <Button.Background>
+                <SolidColorBrush Color="#FF7649D8" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="one1_Copy" Content="Программы для ЭВМ"   FontSize="50" Click="one1_Click" FontFamily="/Patents_prog;component/Text/#Franklin Gothic Demi"  Grid.Row="0"  Grid.Column="2"  Grid.RowSpan="7">
+            <Button.Background>
+                <SolidColorBrush Color="#FF7649D8" Opacity="0.5"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="one1_Copy1" Content="Программы для ЭВМ"   FontSize="50" Click="one1_Click" FontFamily="/Patents_prog;component/Text/#Franklin Gothic Demi"  Grid.Column="4"  Grid.RowSpan="7" Grid.Row="0">
+            <Button.Background>
+                <SolidColorBrush Color="#FF7649D8" Opacity="0.5"/>
+            </Button.Background>
+
+        </Button>
+        <Image Source="/Img\Page1IMG\programming-language.png"  Width="400"  Grid.RowSpan="3" />
+    </Grid>
+</Page>

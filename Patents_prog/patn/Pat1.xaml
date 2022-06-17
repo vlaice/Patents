@@ -1,0 +1,129 @@
+﻿<Page x:Class="Patents_prog.patn.Pat1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Patents_prog.patn"
+      mc:Ignorable="d" 
+      Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+      Width="{x:Static SystemParameters.PrimaryScreenWidth}"
+      Title="Pat1" Style="{DynamicResource PageStyle}">
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}"  BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+            <RowDefinition Height="216*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="5" Margin="10,10,10,10" Grid.RowSpan="5" CornerRadius="35">
+            <Border.Background>
+                <SolidColorBrush Color="#FF7649D8" Opacity="0.5"/>
+            </Border.Background>
+        </Border>
+        <Border Grid.ColumnSpan="4" Margin="206,193,40,215" Grid.RowSpan="3" CornerRadius="35" Grid.Row="2" Grid.Column="1">
+            <Border.Background>
+                <SolidColorBrush Color="#FF151515" Opacity="0.75"/>
+            </Border.Background>
+        </Border>
+        <Border Background="White" CornerRadius="35" Grid.ColumnSpan="2" Margin="35,120,208,215" Grid.RowSpan="5"/>
+        <Image Source="/Pt\2014619455.jpg"  Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+
+        <TextBlock FontSize="36" Grid.ColumnSpan="4" Grid.Column="1" Margin="211,4,0,3" FontFamily="/Patents_prog;component/Text/#Franklin Gothic Demi" Grid.RowSpan="2" Foreground="White" Grid.Row="1" FontWeight="ExtraBold" TextDecorations="{x:Null}"><Run Text="П"/><Run Text="рограмм"/><Run Text="а"/><Run Text=" для ЭВМ: «Forecast of number of forest fires»  "/><LineBreak/><Run Text="Программа предназначена для прогнозирования количества "/><LineBreak/><Run Text="лесных пожаров в муниципальном районе субъекта РФ. "/><LineBreak/><Run Text="Прогноз проводится с использованием данных по погоде в районе, "/><LineBreak/><Run Text="а также с использованием данных космического мониторинга термоточек. "/><LineBreak/><Run Text="Тип реализующей ЭВМ: ПК  "/><LineBreak/><Run Text="Язык программирования: C++/Qt (в среде QT Creator)  "/><LineBreak/><Run Text="Вид и версия операционной системы: Windows  "/><LineBreak/><Run Text="Объем программы для ЭВМ: 115 Кб"/></TextBlock>
+        <Button x:Name="b1" IsEnabled="True" ToolTip="One" VerticalAlignment="Center" HorizontalAlignment="Left" Background="{x:Null}" Click="B1_Click">
+            <StackPanel Height="90" Width="123">
+                <Image x:Name="image_1" Height="88" Margin="10,0">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Img\Page2IMG\angle-left.png"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Source" Value="/Img\Page2IMG\angle-left1.png"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </StackPanel>
+        </Button>
+        <Button x:Name="b2" IsEnabled="True" ToolTip="One" VerticalAlignment="Center" HorizontalAlignment="Center"   Height="296"
+            Command="{Binding CloseWindow}" Width="479"    Background="{x:Null}"  Margin="232,193,57,219" Grid.ColumnSpan="2" Grid.Column="2" Click="b2_Click" Grid.RowSpan="3" Grid.Row="2"  >
+            <StackPanel Height="296" Width="407">
+                <Image x:Name="image_2" Height="298" Margin="0,0,10,0">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Img\Print\Forest_Fires\2.png" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Source" Value="/Img\Print\Forest_Fires\2(2).png" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <Image  Height="0" Width="37"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="b3" IsEnabled="True" ToolTip="One" VerticalAlignment="Center" HorizontalAlignment="Center"   Height="296"
+            Command="{Binding CloseWindow}" Width="405"    Background="{x:Null}"  Margin="226,193,137,219" Grid.ColumnSpan="2" Click="b3_Click" Grid.RowSpan="3" Grid.Column="1" Grid.Row="2"  >
+            <StackPanel Height="296" Width="407">
+                <Image x:Name="image_3" Height="298" Margin="0,0,10,0">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Img\Print\Forest_Fires\1.png" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Source" Value="/Img\Print\Forest_Fires\1(2).png" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <Image  Height="0" Width="37"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="b4" IsEnabled="True" ToolTip="One" VerticalAlignment="Center" HorizontalAlignment="Center"   Height="296"
+            Command="{Binding CloseWindow}" Width="410"    Background="{x:Null}"  Margin="308,193,50,219" Grid.Column="3" Click="b4_Click" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Row="2">
+            <StackPanel Height="296" Width="407">
+                <Image x:Name="image_4" Height="298" Margin="0,0,10,0">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="/Img\Print\Forest_Fires\3.png" />
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Source" Value="/Img\Print\Forest_Fires\3(3).png" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <Image  Height="0" Width="37"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>
